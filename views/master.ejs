@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello bot</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>Binance Trading</h1>
+        <div class="container-left">
+            <h2>Chart BTC</h2>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div id="tradingview_33893"></div>
+                <div class="tradingview-widget-copyright"><a
+                        href="https://www.tradingview.com/symbols/BTCUSDT/?exchange=BINANCE" rel="noopener"
+                        target="_blank"></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                    new TradingView.widget(
+                        {
+                            "width": 750,
+                            "height": 410,
+                            "symbol": "BINANCE:BTCUSDT",
+                            "interval": "D",
+                            "timezone": "Asia/Bangkok",
+                            "theme": "light",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": true,
+                            "withdateranges": true,
+                            "hide_side_toolbar": false,
+                            "allow_symbol_change": true,
+                            "studies": [
+                                "BB@tv-basicstudies"
+                            ],
+                            // "show_popup_button": true,
+                            // "popup_width": "1000",
+                            // "popup_height": "650",
+                            "container_id": "tradingview_33893"
+                        }
+                    );
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+        <div class="container-right">
+            <h2>BTC: <span id="price-btc">0</span></h2>
+            <div class="coin-form">
+                <input class="form-input" id="numCoin" type="number" placeholder="enter num of coin"><br>
+                <button class="btn btn-buy" id="btnBuy">BUY</button><button id="btnSell" class="btn btn-sell">SELL</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
