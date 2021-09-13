@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(188, 238, 221);
+}
+.wrapper {
+  margin: auto;
+  width: 95%;
+}
+.wrapper h1 {
+  background-color: aquamarine;
+  text-align: center;
+}
+.wrapper h2 {
+  text-align: center;
+}
+.container-left {
+  background-color: white;
+  width: 65%;
+  min-width: 759px;
+  float: left;
+  min-height: 500px;
+}
+.container-right {
+  width: 35%;
+  float: right;
+  min-height: 500px;
+  background-color: aquamarine;
+}
+.coin-form{
+  text-align: center;
+}
+.btn{
+  margin: 7px 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.btn-buy{
+  color:#fff;
+  background-color: #388438;
+}
+.btn-sell{
+  color: #fff;
+  background-color: #865f25;
+}
+.form-input{
+  width: 48%;
+  font-size: 17px;
+}
